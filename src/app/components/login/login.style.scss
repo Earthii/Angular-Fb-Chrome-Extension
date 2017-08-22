@@ -1,0 +1,69 @@
+$custom-white : #fff;
+
+/*------------------+
+|     LOGIN PAGE    |
+ +------------------*/
+.loginPageContainr{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  background-color:#EFF0F4;
+  .loginPageHeader{
+    height:7%;
+    background-color:#233B6E;
+    color:$custom-white;
+  }
+  .contentContainer{
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    .logoContainer{
+      margin:auto;
+      background-color:yellow;
+    }
+    .loginButtonContainer{
+      margin:auto;
+      .loginBtn, .logoutBtn{
+        outline:none;
+        height: 40px;
+        text-align: center;
+        width: 130px;
+        border-radius:40px;
+        background: $custom-white;
+        border: 2px solid #415F9D;
+        color:#415F9D;
+        letter-spacing:1px;
+        text-shadow:0;
+        font:{
+          size:12px;
+          weight:bold;
+        }
+        cursor: pointer;
+        transition: all 0.25s ease;
+        &:hover {
+          color:white;
+          background: #415F9D;
+        }
+        &:active {
+          //letter-spacing: 2px;
+          letter-spacing: 2px ;
+        }
+      }
+      .loginBtn:after {
+        content:"LOG IN";
+      }
+      .logoutBtn:after {
+        content:"LOG OUT";
+      }
+    }
+  }
+  .loginPageFooter{
+    height:5%;
+    width:100%;
+    background-color:#415F9D;
+    position: absolute;
+    bottom:0;
+    color:$custom-white;
+  }
+}
