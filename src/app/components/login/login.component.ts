@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router';
+import { FacebookService, LoginResponse } from 'ngx-facebook'
 
 @Component({
     selector:'login-component',
@@ -8,10 +9,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent{
 
-    constructor(private router:Router){
+    constructor(private router:Router, private fb:FacebookService){
 
     }
-    handleLogin(){
-        this.router.navigate(['/chat'])
+
+    handleLogin() : void{
+        this.fb.login().then((response : LoginResponse) => console.log(response))
+            .catch((error : any) => console.log(error));
+        // this.router.navigate(['/chat'])
     }
 }
