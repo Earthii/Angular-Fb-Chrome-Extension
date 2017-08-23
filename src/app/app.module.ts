@@ -1,66 +1,63 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'
+import {environment} from '../environments/environment';
+import {FacebookModule, FacebookService, InitParams} from 'ngx-facebook'
+import {NgFacebookService} from './services/Ng-FacebookService'
 
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { ChatComponent } from './components/chat/chat.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router'
+import {SharedModule} from './shared.module'
 
-import { FacebookModule, FacebookService, InitParams } from 'ngx-facebook'
+import {AppComponent} from './app.component';
+import {LoginComponent} from './components/login/login.component';
+import {ChatComponent} from './components/chat/chat.component';
+
 import {ChatModule} from "./components/chat/chat.module";
 
 const routes: Routes = [
     {
-        path:'',
-        redirectTo:'login',
-        pathMatch:'full'
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
     },
     {
         path: 'login',
         component: LoginComponent
     },
     {
-        path:'chat',
-        children:[
+        path: 'chat',
+        children: [
             {
-                path:'',
-                component:ChatComponent
+                path: '',
+                component: ChatComponent
             }
         ]
     }
 ];
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      LoginComponent,
-      ChatComponent
-  ],
-  imports: [
-      BrowserModule,
-      FacebookModule,
-      ChatModule,
-      RouterModule.forRoot(routes)
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        ChatComponent,
+    ],
+    imports: [
+        SharedModule,
+        FacebookModule.forRoot(),
 
-  ],
-  providers: [
-      FacebookService
-  ],
-  bootstrap: [AppComponent]
+        ChatModule,
+        RouterModule.forRoot(routes)
+
+    ],
+    exports: [],
+    providers: [
+        FacebookService,
+        NgFacebookService
+
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule implements OnInit {
+export class AppModule {
 
-    constructor(private fb: FacebookService){
-        let initParams: InitParams = {
-            appId: '1906592549561770',
-            xfbml:true,
-            version:'v2.8'
-        };
-
-        fb.init(initParams)
-    }
-
-    ngOnInit(){
+    constructor() {
 
     }
 }

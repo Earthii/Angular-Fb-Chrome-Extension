@@ -1,0 +1,25 @@
+$border-color  : rgba(0, 0, 0, .20);
+
+#message-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#message-toolbar {
+  border-bottom: 1px solid $border-color;
+  padding:7px 0 7px 0;
+  text-align: center;
+}
+#message-list {
+  flex-grow: 1;
+}
+#message-compose {
+  padding: 10px;
+  border-top: 1px solid $border-color;
+}
+#message-compose--input {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize:none;
+}

@@ -1,0 +1,13 @@
+
+#chat-container{
+  display:flex;
+  height:100%;
+}
+friend-list{
+  flex-grow:0.1;
+  border-right:1px solid rgba(0, 0, 0, .20);
+
+}
+conversation{
+  flex-grow:0.9;
+}

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {FacebookService, InitParams, LoginStatus} from "ngx-facebook";
+import {environment} from "../environments/environment";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,5 +11,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.style.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private fb: FacebookService, private router: Router){
+    let initParams: InitParams = {
+      appId: environment.appId,
+      xfbml: true,
+      version: 'v2.8',
+      cookie: true
+    };
+
+    this.fb.init(initParams);
+
+    this.fb.getLoginStatus().then((res : LoginStatus) =>{
+      if(res.status == 'connected'){
+        this.router.navigate(["/chat"]);
+      }
+    });
+  }
 }

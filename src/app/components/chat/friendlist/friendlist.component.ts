@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import {Component, EventEmitter, Input, Output} from '@angular/core'
+import {Friend} from "../../../models/Friend";
 
 @Component({
     selector:'friend-list',
@@ -10,4 +11,13 @@ import { Component } from '@angular/core'
 })
 export class FriendlistComponent{
 
+    @Input()
+    friends : Friend[];
+
+    @Output()
+    viewConversation : EventEmitter<Friend> = new EventEmitter();
+
+    handleViewConversation(event) : void {
+        this.viewConversation.emit(event);
+    }
 }

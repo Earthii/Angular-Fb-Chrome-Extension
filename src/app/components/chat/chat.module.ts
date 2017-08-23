@@ -1,24 +1,28 @@
-import { NgModule } from '@angular/core'
+import {NgModule} from '@angular/core'
+import {SharedModule} from "../../shared.module";
 
-import { ConversationComponent } from './conversation/conversation.component'
-import { FriendlistComponent } from './friendlist/friendlist.component'
+import {ConversationComponent} from './conversation/conversation.component'
+import {FriendlistComponent} from './friendlist/friendlist.component'
+import {PreviewComponent} from "./friendlist/preview/preview.component";
+import {NgFacebookService} from "../../services/Ng-FacebookService";
 
 @NgModule({
-    declarations:[
+    declarations: [
+        ConversationComponent,
+        FriendlistComponent,
+        PreviewComponent
+    ],
+    imports: [
+        SharedModule
+    ],
+    exports: [
         ConversationComponent,
         FriendlistComponent
     ],
-    imports:[
-
-    ],
-    exports:[
-        ConversationComponent,
-        FriendlistComponent
-    ],
-    providers:[
-
+    providers: [
+        NgFacebookService
     ]
 })
-export class ChatModule{
+export class ChatModule {
 
 }

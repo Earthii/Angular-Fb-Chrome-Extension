@@ -1,3 +1,7 @@
-<ul>
-    List of friends
-</ul>
+<div>
+    <ul class="listOfFriends">
+        <li *ngFor="let friend of friends">
+            <preview [friend]="friend" (viewConversation)="handleViewConversation($event)"></preview>
+        </li>
+    </ul>
+</div>
