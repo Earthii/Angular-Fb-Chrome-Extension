@@ -4,6 +4,8 @@
 ---
 messenger-chrome-extension is a chrome extension that opens a popup which will allow the user to chat with their Facebook friends without having to switch tabs. This can be useful when you only want to send a quick message without having to look away from your favorite youtube video or if you're just browsing the internet.
 
+![PoC](/PoC.png?raw=true "Optional Title")
+
 ### Features
 ---
 | Feature       | Status        | 
