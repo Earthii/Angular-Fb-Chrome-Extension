@@ -24,7 +24,7 @@ The Front-end and Back-end is hosted seperately on [Heroku](https://www.heroku.c
 
 ### Architecture
 ---
-![Alt text](/Architectural-Diagram.svg?raw=true "Optional Title")
+![Diagram](Architectural-Diagram.svg?raw=true "Optional Title")
 
 ### Colaborators
 ---
