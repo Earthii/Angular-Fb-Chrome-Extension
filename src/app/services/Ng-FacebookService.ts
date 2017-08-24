@@ -1,7 +1,8 @@
-import {AuthResponse, FacebookService, LoginOptions, LoginResponse, LoginStatus} from 'ngx-facebook'
+import {FacebookService, LoginOptions, LoginResponse, LoginStatus, InitParams} from 'ngx-facebook'
 
 import { Injectable } from '@angular/core'
 import {Router} from "@angular/router";
+import {environment} from "../../environments/environment";
 
 type ApiMethod = 'get' | 'post' | 'delete';
 
@@ -11,7 +12,14 @@ export class NgFacebookService{
     private accessToken : string;
 
     constructor(private router:Router, private fb:FacebookService){
+        let initParams: InitParams = {
+            appId: environment.appId,
+            xfbml: true,
+            version: 'v2.8',
+            cookie: true
+        };
 
+        this.fb.init(initParams);
     }
 
     getLoginStatus() : Promise<string>{

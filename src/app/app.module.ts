@@ -1,4 +1,3 @@
-import {environment} from '../environments/environment';
 import {FacebookModule, FacebookService, InitParams} from 'ngx-facebook'
 import {NgFacebookService} from './services/Ng-FacebookService'
 
