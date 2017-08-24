@@ -28,10 +28,6 @@ The Front-end and Back-end is hosted seperately on [Heroku](https://www.heroku.c
 ---
 ![Diagram](Architectural-Diagram.svg?raw=true "Optional Title")
 
-### Colaborators
----
-Laurendy Lam <br/>
-Eric Xiao
 
 
  
