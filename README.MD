@@ -24,8 +24,7 @@ The Front-end and Back-end is hosted seperately on [Heroku](https://www.heroku.c
 
 ### Architecture
 ---
-
- <img src="https://github.com/Earthii/Angular-Fb-Chrome-Extension/blob/master/Architectural-Diagram.svg" alt="diagram">       
+![Alt text](/Architectural-Diagram.svg?raw=true "Optional Title")
 
 ### Colaborators
 ---
