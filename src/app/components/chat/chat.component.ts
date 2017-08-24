@@ -23,15 +23,27 @@ export class ChatComponent implements OnInit {
         this.friends = [
             {
                 name: 'Eric Xiao',
-                previewMsg: 'Hello world'
+                previewMsg: 'Hello world',
+                messages : [
+                    'Message 1',
+                    'Message 2'
+                ]
             },
             {
                 name: 'Laurendy Lam',
-                previewMsg: 'Hello world2'
+                previewMsg: 'Hello world2',
+                messages : [
+                    'Message 3',
+                    'Message 4'
+                ]
             },
             {
                 name: 'Tom',
-                previewMsg: 'Hello world3'
+                previewMsg: 'Hello world3',
+                messages : [
+                    'Message 5',
+                    'Message 6'
+                ]
             },
         ];
 
@@ -40,11 +52,7 @@ export class ChatComponent implements OnInit {
     }
 
     handleViewConversation(event): void {
+        console.log(event);
         this.currentFriend = event;
-    }
-
-    test(){
-        this.ngFb.getLoginStatus();
-        this.ngFb.callApi("/me");
     }
 }

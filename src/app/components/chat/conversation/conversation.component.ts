@@ -13,13 +13,8 @@ export class ConversationComponent{
     @Input()
     currentFriend : any;
 
-    convo :string[];
+    constructor(){
 
-    constructor(private ngFb:NgFacebookService){
-        this.ngFb.getLoginStatus().then(()=>{
-            console.log('constructing conversation')
-            this.convo =['hello','world']
-        });
     }
 
 
