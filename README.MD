@@ -21,6 +21,8 @@ The Front-end and Back-end is hosted seperately on [Heroku](https://www.heroku.c
   <img src="https://cdn-images-1.medium.com/max/1920/1*gdoQ1_5OID90wf1eLTFvWw.png" alt="Angularjs" width="150px"     height="50px">
   <img src="https://www-assets3.herokucdn.com/assets/logo-purple-08fb38cebb99e3aac5202df018eb337c5be74d5214768c90a8198c97420e4201.svg" alt="Heroku" width="150px" height="40px">
 </div>
+### Architecture
+ <img src="Architectural-diagram.svg">       
 
 ### Colaborators
 ---
