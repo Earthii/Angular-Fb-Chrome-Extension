@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit{
     }
 
     handleLogin() : void{
-        this.ngFb.login();
-
+        // this.ngFb.login();
+        this.router.navigate(["chat"])
     }
 
     handleLogout() : void{
