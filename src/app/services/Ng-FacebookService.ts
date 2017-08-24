@@ -19,7 +19,11 @@ export class NgFacebookService{
             cookie: true
         };
 
-        this.fb.init(initParams);
+        this.fb.init(initParams).then(()=>{
+            console.log("Done initializing fb sdk")
+        });
+        this.fb.getLoginStatus().then(()=>console.log("hello world"));
+
     }
 
     getLoginStatus() : Promise<string>{

@@ -3,7 +3,9 @@
         {{currentFriend.name}}
     </div>
     <div id="message-list">
-
+        <ul>
+            <li *ngFor="let message of convo">{{message}}</li>
+        </ul>
     </div>
     <div id="message-compose">
         <textarea type="text" id="message-compose--input" placeholder="Type a message.." rows="1"></textarea>

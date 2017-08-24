@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core'
+import {NgFacebookService} from "../../../services/Ng-FacebookService";
 
 @Component({
     selector:'conversation',
@@ -11,4 +12,15 @@ import {Component, Input} from '@angular/core'
 export class ConversationComponent{
     @Input()
     currentFriend : any;
+
+    convo :string[];
+
+    constructor(private ngFb:NgFacebookService){
+        this.ngFb.getLoginStatus().then(()=>{
+            console.log('constructing conversation')
+            this.convo =['hello','world']
+        });
+    }
+
+
 }
