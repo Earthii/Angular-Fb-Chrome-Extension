@@ -1,4 +1,4 @@
-# messenger-chrome-extension
+# PoC, messenger-chrome-extension
 
 ### What is it?
 ---
